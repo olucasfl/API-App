@@ -82,12 +82,6 @@ app.delete('/users/:id', async (req, res) => {
 });
 
 //Rota do server na porta 3000
-<<<<<<< HEAD
-app.listen(3000, () => {
-    console.log('http://34.151.218.111:3000');
-});
-=======
 app.listen(3000, '0.0.0.0', () => {
     console.log('http://34.151.218.111:3000/');
 });
->>>>>>> 5c0f292 (Alteraçoẽs da VM - urls organizados)
