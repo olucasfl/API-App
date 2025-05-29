@@ -76,5 +76,5 @@ app.delete('/users/:id', async (req, res) => {
 
 //Rota do server na porta 3000
 app.listen(3000, () => {
-    console.log('http://localhost:3000');
+    console.log('http://34.151.218.111:3000');
 });
