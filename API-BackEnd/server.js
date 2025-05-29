@@ -1,12 +1,19 @@
 import express from 'express';
 import { PrismaClient } from '@prisma/client';
 import cors from 'cors';
+import dotenv from 'dotenv';
+dotenv.config();
+
 
 const app = express();
 const prisma = new PrismaClient();
 
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: 'http://34.151.218.111:5173',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true
+}));
 
 //Rota para envir usuários POST
 app.post('/users', async (req, res) => {
@@ -75,6 +82,12 @@ app.delete('/users/:id', async (req, res) => {
 });
 
 //Rota do server na porta 3000
+<<<<<<< HEAD
 app.listen(3000, () => {
     console.log('http://34.151.218.111:3000');
 });
+=======
+app.listen(3000, '0.0.0.0', () => {
+    console.log('http://34.151.218.111:3000/');
+});
+>>>>>>> 5c0f292 (Alteraçoẽs da VM - urls organizados)
